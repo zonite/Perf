@@ -1,2 +1,2 @@
-# libap
-Aircraft performance analysis library and tool
+# Perf
+Aircraft Flight test data generation tool
