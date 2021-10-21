@@ -1,0 +1,6 @@
+#ifndef PHYSICS
+#define PHYSICS
+
+#include "physics.h"
+
+#endif // PHYSICS

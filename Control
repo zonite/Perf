@@ -1,0 +1,6 @@
+#ifndef CONTROL
+#define CONTROL
+
+#include "control.h"
+
+#endif // CONTROL
