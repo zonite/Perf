@@ -161,6 +161,7 @@ public:
     float tat = 0.0f;
     float sat = 0.0f;
     float g = 0.0f;
+    QDateTime date;
 
     Quantity speed = Quantity(Unit("kt", 1.852f/3.6f), 0.0f);
     Length alt = Length(Unit("ft", 0.3048f), 1000.0f);

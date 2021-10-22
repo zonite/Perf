@@ -734,7 +734,8 @@ void Aircraft::data(QTextStream &p)
     p << "\n";
     p << "Aircraft;" << m_sName << "\n";
     p << "Path;" << m_sPath << "\n";
-    p << "Last modified;" << m_cModified.toString() << "\n";
+    p << "Last modified;" << m_cModified.toUTC().toString() << "\n";
+    p << "Exported" << QDateTime::currentDateTimeUtc().toString() << "\n";
     p << "Hash;" << m_sHash.toHex() << "\n";
     //p << "Test throttles;" << m_cTestThrottles << "\n";
     p << "VMO;" << m_fVMO.val() << m_fVMO.getUnit().sym().prepend(";") << "\n";
@@ -837,6 +838,7 @@ void Aircraft::captureData()
     m_pCurTP->tat = PerfPlugin::getTat(); //True air temperature
     m_pCurTP->sat = PerfPlugin::getSat(); //stagnation air temperature
     m_pCurTP->g = PerfPlugin::getG();
+    m_pCurTP->date = QDateTime::currentDateTimeUtc();
 }
 
 void Config::captureData()

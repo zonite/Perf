@@ -150,6 +150,7 @@ void TestPoint::dataHeader(QTextStream &out)
     out << "True air temperature (K);"; //True air temperature
     out << "Stagnation air temperature (K);"; //stagnation air temperature
     out << "Gravity at current altitude (m/s2);";
+    out << "Captured (Timestamp);";
     out << "\n";
 }
 
@@ -231,6 +232,7 @@ void TestPoint::data(QTextStream &out)
     out << tat << ";"; //True air temperature
     out << sat << ";"; //stagnation air temperature
     out << g << ";";
+    out << date.toString() << ";";
     out << "\n";
 }
 
