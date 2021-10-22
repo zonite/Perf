@@ -256,10 +256,12 @@ bool AutothrottleAxis<T>::set()
     }
 
     if (result1 || this->control->maxed()) {
-        //T cur = PerfPlugin::getN2mean();
-        T cur = PerfPlugin::getThrustTotal();
+        //T cur = PerfPlugin::getN1mean();
+        //T cur = PerfPlugin::getN2mean(); //Fast
+        //T cur = PerfPlugin::getEPRmean();
+        T cur = PerfPlugin::getThrustTotal(); //Very accurate but slow
         //qDebug() << "Thrust stability" << (float)cur << (float)thrust << (cur == thrust);
-        if (cur == thrust)
+        if (qAbs(cur - thrust) < 1.0f) //Thrust changed less that a Newton
             result2 = true;
         thrust = cur;
     }

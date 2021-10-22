@@ -2115,8 +2115,8 @@ float PerfPlugin::getOpenGLaccZ()
 
 float PerfPlugin::getTestDeceleration()
 {
-    return -getTotalForceZ();
-    //return -getOpenGLaccZ();
+    //return -getTotalForceZ();
+    return -getOpenGLaccZ() * getGrossMass();
 }
 
 

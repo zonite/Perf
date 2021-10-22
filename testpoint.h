@@ -99,6 +99,10 @@ public:
     float alpha = 0.0f;
     float beta = 0.0f;
     float vpath = 0.0f;
+    float Qdot = 0.0f;
+    float Rdot = 0.0f;
+    float Pdot = 0.0f;
+    float TestDecel = 0.0f;
     float true_theta = 0.0f; //Pitch
     float true_phi = 0.0f; //Roll
     float true_psi = 0.0f; //Heading

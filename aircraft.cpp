@@ -775,6 +775,10 @@ void Aircraft::captureData()
     m_pCurTP->alpha = m_fAlpha;
     m_pCurTP->beta = PerfPlugin::getBeta();
     m_pCurTP->vpath = PerfPlugin::getVPath();
+    m_pCurTP->Qdot = PerfPlugin::getAngAccQdot();
+    m_pCurTP->Rdot = PerfPlugin::getAngAccRdot();
+    m_pCurTP->Pdot = PerfPlugin::getAngAccPdot();
+    m_pCurTP->TestDecel = PerfPlugin::getTestDeceleration();
     m_pCurTP->true_theta = PerfPlugin::getTrueTheta(); //Pitch
     m_pCurTP->true_phi = PerfPlugin::getTruePhi(); //Roll
     m_pCurTP->true_psi = PerfPlugin::getTruePsi(); //Heading

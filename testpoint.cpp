@@ -93,6 +93,10 @@ void TestPoint::dataHeader(QTextStream &out)
     out << "Alpha (AOA deg);";
     out << "Beta (deg);";
     out << "Vertical path (deg);";
+    out << "Q' (deg/s2);";
+    out << "R' (deg/s2);";
+    out << "P' (deg/s2);";
+    out << "TestDecel;";
     out << "Theta (deg);";
     out << "Phi (deg);";
     out << "Psi (deg);";
@@ -170,6 +174,10 @@ void TestPoint::data(QTextStream &out)
     out << alpha << ";";
     out << beta << ";";
     out << vpath << ";";
+    out << Qdot << ";";
+    out << Rdot << ";";
+    out << Pdot << ";";
+    out << TestDecel << ";";
     out << true_theta << ";";
     out << true_phi << ";";
     out << true_psi << ";";
