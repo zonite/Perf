@@ -1,5 +1,5 @@
 #include "perfthread.h"
-#include "perfanal.h"
+#include "perfanalyzer.h"
 #include "debug.h"
 
 PerfThread::PerfThread(QString path)
@@ -51,7 +51,7 @@ void PerfThread::start()
 
     CONSOLE("Create windows");
 
-    m_pW = new PerfAnal();
+    m_pW = new PerfAnalyzer();
     m_pW->show();
 
 }

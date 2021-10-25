@@ -35,7 +35,7 @@ float PerfPlugin::m_fAlpha = 0.0f;
 double PerfPlugin::m_dMinAlt = 20.0;
 
 PerfPlugin* PerfPlugin::m_pPlugin = nullptr;
-PerfAnal *PerfPlugin::m_pPerfApp = nullptr;
+PerfAnalyzer *PerfPlugin::m_pPerfApp = nullptr;
 Aircraft *PerfPlugin::m_pCurAC = nullptr;
 QString PerfPlugin::m_sQtPluginPath = "";
 QString PerfPlugin::m_pExportPath = "";
@@ -3492,7 +3492,7 @@ void PerfPlugin::menuHandler(void *mRef, char *iRef)
         }
         CONSOLE("Create windows");
 
-        m_pPerfApp = new PerfAnal();
+        m_pPerfApp = new PerfAnalyzer();
 
         if (checkGravity()) {
             m_pPerfApp->show();

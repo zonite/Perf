@@ -7,7 +7,7 @@
 #include <QObject>
 #include <QString>
 
-#include "perfanal.h"
+#include "perfanalyzer.h"
 
 class PerfThread : public QObject
 {
@@ -22,7 +22,7 @@ private:
     QApplication *m_pApp;
     QString m_QtPluginPath;
     //QCoreApplication *m_pApp;
-    PerfAnal *m_pW;
+    PerfAnalyzer *m_pW;
 };
 
 #endif // PERFTHREAD_H

@@ -27,11 +27,11 @@ SOURCES += \
     autopilot.cpp \
     control.cpp \
     debug.cpp \
+    perfanalyzer.cpp \
     perfdebug.cpp \
     physics.cpp \
 #    qvectord3d.cpp \
     xpdata.cpp \
-    perfanal.cpp \
     perfplugin.cpp \
     perfthread.cpp \
 #    test.cpp \
@@ -44,12 +44,12 @@ HEADERS += \
     aircraft.h \
     autopilot.h \
     control.h \
+    perfanalyzer.h \
     perfdebug.h \
     physics.h \
     qvectord3d.h \
     xpdata.h \
     debug.h \
-    perfanal.h \
     perfplugin.h \
     perfthread.h \
     testpoint.h \
@@ -59,7 +59,7 @@ HEADERS += \
 #    test.h
 
 #FORMS += \
-#    perfanal.ui
+#    perfanalyzer.ui
 
 #RESOURCES     = perf.qrc
 #<!DOCTYPE RCC><RCC version="1.0">

@@ -1,5 +1,5 @@
-#ifndef PERFANAL_H
-#define PERFANAL_H
+#ifndef PERFANALYZER_H
+#define PERFANALYZER_H
 
 #include <QMainWindow>
 #include <QMenu>
@@ -15,18 +15,18 @@
 
 #include "perfplugin.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class PerfAnal; }
-QT_END_NAMESPACE
+//QT_BEGIN_NAMESPACE
+//namespace Ui { class PerfAnalyzer; }
+//QT_END_NAMESPACE
 
 class PerfPlugin;
 
-class PerfAnal : public QMainWindow
+class PerfAnalyzer : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit PerfAnal(QWidget *parent = nullptr);
-    ~PerfAnal();
+    explicit PerfAnalyzer(QWidget *parent = nullptr);
+    ~PerfAnalyzer();
 
 signals:
 
@@ -53,4 +53,4 @@ private:
     PerfPlugin *m_pPlugin = nullptr;
 };
 
-#endif // PERFANAL_H
+#endif // PERFANALYZER_H

@@ -4,13 +4,13 @@
 #include <QPushButton>
 //#include <QTextEdit>
 
-#include "perfanal.h"
+#include "perfanalyzer.h"
 #include "testpoint.h"
 #include "perfdebug.h"
 //#include "ui_perfanal.h"
 
 //PerfAnal::PerfAnal(QWidget *parent) : QMainWindow(parent), ui(new Ui::PerfAnal)
-PerfAnal::PerfAnal(QWidget *parent) : QMainWindow(parent)
+PerfAnalyzer::PerfAnalyzer(QWidget *parent) : QMainWindow(parent)
 {
     //ui->setupUi();
     //setAttribute(Qt::WA_DeleteOnClose);
@@ -36,7 +36,7 @@ PerfAnal::PerfAnal(QWidget *parent) : QMainWindow(parent)
     setCentralWidget(window);
 }
 
-PerfAnal::~PerfAnal()
+PerfAnalyzer::~PerfAnalyzer()
 {
     //delete ui;
     //QSettings settings(QCoreApplication::organizationName(), QCoreApplication::applicationName());
@@ -46,7 +46,7 @@ PerfAnal::~PerfAnal()
     delete aboutAct;
 }
 
-void PerfAnal::closeEvent(QCloseEvent *event)
+void PerfAnalyzer::closeEvent(QCloseEvent *event)
 {
     QSettings settings(QCoreApplication::organizationName(), QCoreApplication::applicationName());
     settings.setValue("geometry", saveGeometry());
@@ -54,7 +54,7 @@ void PerfAnal::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void PerfAnal::about()
+void PerfAnalyzer::about()
 {
     QMessageBox::about(this, tr("About Application"),
              tr("The <b>Performance Plugin</b> "
@@ -63,7 +63,7 @@ void PerfAnal::about()
 
 }
 
-void PerfAnal::createActions()
+void PerfAnalyzer::createActions()
 {
     exitAct = new QAction(tr("E&xit"), this);
     exitAct->setShortcuts(QKeySequence::Quit);
@@ -73,7 +73,7 @@ void PerfAnal::createActions()
     aboutAct = new QAction(tr("&About"), this);
     //exitAct->setShortcuts(QKeySequence::About);
     aboutAct->setStatusTip(tr("About..."));
-    connect(aboutAct, &QAction::triggered, this, &PerfAnal::about);
+    connect(aboutAct, &QAction::triggered, this, &PerfAnalyzer::about);
 
     //aboutQtAct = new QAction(tr("About &Qt"));
     //exitAct->setShortcuts(QKeySequence::AboutQt);
@@ -82,7 +82,7 @@ void PerfAnal::createActions()
 }
 
 
-void PerfAnal::createMenus()
+void PerfAnalyzer::createMenus()
 {
     fileMenu = menuBar()->addMenu(tr("&File"));
     //fileMenu->addAction(newAct);

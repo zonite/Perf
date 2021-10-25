@@ -11,11 +11,11 @@
 #include <Physics>
 
 //#include "perfthread.h"
-#include "perfanal.h"
+#include "perfanalyzer.h"
 #include "testpoint.h"
 #include "qvectord3d.h"
 
-class PerfAnal;
+class PerfAnalyzer;
 class PerfPlugin;
 //template<typename T>
 //class Autopilot;
@@ -490,7 +490,7 @@ private:
     void hardReset();
 
     static PerfPlugin* m_pPlugin;
-    static PerfAnal *m_pPerfApp;
+    static PerfAnalyzer *m_pPerfApp;
     static Aircraft *m_pCurAC;
 public:
     static const QByteArray pluginOrg;
